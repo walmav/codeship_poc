@@ -1,0 +1,8 @@
+
+pipeline:
+  test:
+    image: golang:1.8
+    commands:
+      - go get -u github.com/drone/drone-ui/dist
+      - go get -u golang.org/x/tools/cmd/cover
+      - go test -cover $(go list ./... | grep -v /vendor/)
