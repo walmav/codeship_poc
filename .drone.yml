@@ -1,8 +1,9 @@
+workspace:
+  base: /go
+  path: src/github.com/drone/drone-go
 
 pipeline:
-  test:
-    image: golang:1.8
+  build:
+    image: golang:1.6
     commands:
-      - go get -u github.com/drone/drone-ui/dist
-      - go get -u golang.org/x/tools/cmd/cover
-      - go test -cover $(go list ./... | grep -v /vendor/)
+      - go test -v github.com/drone/drone-go/drone
