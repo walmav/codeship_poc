@@ -2,5 +2,5 @@ pipeline:
   build:
     image: golang
     commands:
-     - go get github.com/go-kit
+     - go get github.com/go-kit/kit
      - go build
