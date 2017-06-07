@@ -2,4 +2,5 @@ pipeline:
   build:
     image: golang
     commands:
+     - go get github.com/go-kit/kit/endpoint
      - go build
